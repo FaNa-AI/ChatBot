@@ -25,3 +25,43 @@ A simple **Persian-language chatbot** based on the **Retrieval-Augmented Generat
 
 ```bash
 pip install torch transformers sentence-transformers scikit-learn numpy
+
+# falan-t5-xl Chatbot
+
+An intelligent chatbot based on the large language model **falan-t5-xl** for answering questions and engaging in natural conversations in Persian.
+
+---
+
+## Introduction
+
+This project features a chatbot built on the T5 XL model, trained specifically for understanding and generating Persian text. You can use this chatbot in various applications such as virtual assistants, automated responders, and more.
+
+---
+
+## Features
+
+- Persian language understanding and text generation
+- Intelligent responses to user queries
+- Can be used offline (with the trained model available)
+- Simple and extensible design
+
+---
+
+## Requirements
+
+- Python 3.8+
+- Required libraries:
+  - transformers
+  - torch
+  - datasets (optional)
+
+---
+
+## Installation
+
+First, clone the repository:
+
+```bash
+git clone https://github.com/username/falan-t5-xl.git
+cd falan-t5-xl
+
