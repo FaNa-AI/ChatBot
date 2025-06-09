@@ -1,29 +1,27 @@
 from transformers import pipeline
 
-# بارگذاری مدل Flant-T5-base برای task "text2text-generation"
-
+# Load the Flan-T5-base model for the "text2text-generation" task
 try:
     chatbot = pipeline("text2text-generation", model="google/flan-t5-base")
 except Exception as e:
-    print(f"خطا در بارگذاری مدل: {e}")
-    print("لطفاً از اتصال به اینترنت اطمینان حاصل کنید یا دوباره تلاش کنید.")
+    print(f"Error loading model: {e}")
+    print("Please make sure you are connected to the internet or try again later.")
     exit()
 
-print("چت‌بات آماده است. برای خروج، 'خروج' یا 'بای' را تایپ کنید.")
+print("Chatbot is ready. Type 'exit' or 'bye' to quit.")
 
 while True:
-    user_input = input("شما: ")
+    user_input = input("You: ")
 
-    if user_input.lower() in ["خروج", "بای", "exit", "bye"]:
-        print("چت‌بات: خداحافظ!")
+    if user_input.lower() in ["exit", "bye", "خروج", "بای"]:
+        print("Chatbot: Goodbye!")
         break
 
-    # تولید پاسخ با استفاده از مدل
-   
+    # Generate response using the model
     response = chatbot(user_input, max_length=50, num_return_sequences=1)
 
-    # نمایش پاسخ
+    # Display the response
     if response:
-        print(f"چت‌بات: {response[0]['generated_text']}")
+        print(f"Chatbot: {response[0]['generated_text']}")
     else:
-        print("چت‌بات: متوجه نشدم، می‌توانید دوباره بپرسید؟")
+        print("Chatbot: I didn't understand. Can you ask again?")
