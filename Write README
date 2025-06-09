@@ -1,0 +1,53 @@
+
+
+# 🤖 Persian Chatbot using Flan-T5
+
+A simple command-line chatbot built with Hugging Face Transformers, powered by Google's `flan-t5-base` model, fine-tuned for general-purpose **text-to-text generation**.
+
+---
+
+## 📌 Features
+
+* Utilizes `google/flan-t5-base` from Hugging Face 🤗
+* Supports Persian and English inputs
+* Generates natural text-based replies
+* Graceful error handling and offline warnings
+* Easy to extend or integrate into GUI/web apps
+
+---
+
+## 🧠 Model
+
+* **Model**: `google/flan-t5-base`
+* **Task**: `text2text-generation`
+* **Library**: `transformers` by Hugging Face
+
+---
+
+## ▶️ How to Run
+
+### 1. Install Dependencies
+
+```bash
+pip install transformers
+```
+
+### 2. Run the Bot
+
+```bash
+python chatbot.py
+```
+
+### 3. Start Chatting!
+
+Just type your message — to exit, type `خروج`, `بای`, `exit`, or `bye`.
+
+---
+
+## 📂 File Structure
+
+```
+├── chatbot.py        # Main script
+└── README.md         # Project documentation
+
+
