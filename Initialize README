@@ -1,0 +1,62 @@
+## 🤖 RAG Chatbot with Flan-T5 and Sentence Transformers
+
+This Python script implements a **Retrieval-Augmented Generation (RAG)** chatbot using HuggingFace's `Flan-T5` model for text generation and `SentenceTransformer` for semantic similarity. It combines retrieval and generation to provide more accurate, context-aware answers.
+
+---
+
+### 📌 Key Components
+
+#### 🔧 1. Model Setup
+
+* **Generator Model**: Uses `google/flan-t5-base` for generating responses.
+* **Retriever Model**: Uses `paraphrase-multilingual-MiniLM-L12-v2` to encode both queries and knowledge base sentences into embeddings for similarity comparison.
+
+#### 🧠 2. Knowledge Base
+
+A list of predefined factual sentences (about Python, AI, Germany, etc.) serves as the knowledge base. These are transformed into embeddings for retrieval.
+
+#### 🔍 3. Retrieval Function
+
+* Uses **cosine similarity** to find the top-k most relevant documents from the knowledge base based on the user’s query.
+
+#### 📝 4. Generation Function
+
+* Builds a prompt from the retrieved documents + user query and feeds it into the Flan-T5 model to generate an answer.
+* Supports generation configuration: top-k sampling, top-p nucleus sampling, temperature, etc.
+
+#### 💬 5. Chat Loop
+
+* Continuously accepts user input.
+* Retrieves relevant documents.
+* Generates and prints a response.
+* Stops when the user types `"خروج"` (means "exit" in Persian).
+
+---
+
+### ▶️ Example Usage
+
+```bash
+$ python chatbot.py
+You: What is machine learning?
+Bot: Machine learning is a subfield of artificial intelligence that allows computers to learn from data.
+```
+
+---
+
+### ⚙️ Requirements
+
+Make sure to install:
+
+```bash
+pip install transformers sentence-transformers scikit-learn torch
+```
+
+---
+
+### ✅ Features
+
+* Multilingual support (via multilingual MiniLM)
+* Lightweight and runs on CPU/GPU
+* Fully interpretable and extendable RAG architecture
+* Ideal for educational or demo purposes
+
