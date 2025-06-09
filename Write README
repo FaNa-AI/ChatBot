@@ -47,5 +47,24 @@ Just type your message — to exit, type `خروج`, `بای`, `exit`, or `bye`.
 ```
 ├── chatbot.py        # Main script
 └── README.md         # Project documentation
+```
+
+---
+
+## 📌 Example
+
+```plaintext
+شما: سلام
+چت‌بات: سلام! چطور می‌تونم کمکتون کنم؟
+```
+
+---
+
+## 🔖 Tags (Topics)
+
+```
+#chatbot #transformers #huggingface #flanT5 #textgeneration #persian #AI #NLP #python
+
+
 
 
