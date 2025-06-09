@@ -1,5 +1,3 @@
-
-
 # 🤖 Persian Chatbot using Flan-T5
 
 A simple command-line chatbot built with Hugging Face Transformers, powered by Google's `flan-t5-base` model, fine-tuned for general-purpose **text-to-text generation**.
